@@ -1,0 +1,346 @@
+body{
+  background-image: url("images/back2.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  --Menu-height: 72px; /*var(--Menu-height)*/
+  overflow-x: hidden;
+}
+
+.main {
+  margin-top: 80px;
+  height: 95vh;
+}
+
+.mainBottom{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.mainLogos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.best{
+  width: 180px;
+}
+.ut{
+  width:140px;
+}
+
+.mainLogo img{
+  margin-top: 250px;
+  margin-left: 200px;
+  width: 400px;
+}
+
+.inscriere{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inscriere img{
+  width: 170px;
+}
+
+.mainPeople img{
+  margin-right:200px;
+  width: 400px;
+}
+
+
+.h4{
+  font-family: 'Montserrat';
+}
+
+.titlu{
+  color: #ffa02d;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  font-size: 170%;
+}
+.titluBox
+{
+  border: 1px solid #ffa02d;
+  border-left: none;
+  border-right: none;
+  height: 80px;
+}
+.Menu {
+  overflow: hidden;
+  background-image: url("images/foaie2.png");
+  /*background-color: #ffa22d;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--Menu-height);
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  transition: transform 0.35s;
+  z-index:999;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.Menu img {
+  padding-top: 3px;
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+.Menu a {
+  font-weight: 550;
+  color: white;
+  padding: 10px 10px;
+  font-size: 125%;
+  text-decoration: none;
+  font-family: Verdana;
+  transition: 0.5s;
+}
+
+.Menu a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.Menu--hidden {
+  transform: translateY(calc(-1* var(--Menu-height)));
+  box-shadow: none;
+}
+
+.Menu .icon {
+  display: none;
+}
+
+.container{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+.container-contact{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.mapSize{
+  height: 350px;
+  width: 600px;
+}
+
+.icon2{
+  height: 40px;
+  width: 40px;
+}
+
+.newsletterButton{
+  background-color: #ffa22d;
+  border: #ffa22d;
+  color: black;
+  font-weight: bold;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+}
+
+.mySlides {
+  width: 100%;
+  height: 250px;
+  margin: 0 auto;
+}
+
+/* Next and previous buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 1} 
+  to {opacity: 1}
+}
+
+.mainImage {
+  margin-bottom: 20px;
+}
+
+.mainLogo {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  .mainLogo img{
+    margin-left: 100px;
+  }
+  
+  .mainPeople img{
+    margin-right:100px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .mainLogo img{
+    margin-left: 50px;
+  }
+  
+  .mainPeople img{
+    margin-right:50px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainBottom{
+    align-items: center;
+    justify-content: center;
+  }
+  .mainPeople{
+    align-items: center;
+    justify-content: center;
+  }
+  .mainLogo img{
+    margin-top: 0px;
+    margin-right: 30px;
+    width: 300px;
+  }
+  
+  .mainPeople img{
+    width: 300px;
+    margin-right: 0px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .Menu a:not(:first-child){
+    display: none;
+  }
+  .Menu a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 770px) {
+  .Menu.responsive a.icon {
+    margin-left:auto;
+    margin-right: 0px;
+  }
+  #home, #about{
+    display: none;
+  }
+  #best{
+    margin-left: 3rem;
+  }
+  .Menu.responsive a {
+    float: none;
+    display: block;
+    margin-right: auto;
+    font-size: 115%;
+  }
+  .Menu.responsive img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .mapSize{
+    height: 250px;
+    width: 400px;
+  }
+  .container{
+    font-size:16px;
+  }
+  .mainLogo img{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .best{
+    width: 160px;
+  }
+  .ut{
+    width: 120px;
+  }
+  .mySlides{
+    height: 350px; 
+  }
+}
+@media screen and (max-width: 500px) {
+  .mapSize{
+    height: 250px;
+    width: 300px;
+  }
+ 
+}
+
+/*styiling for job offers page*/
+.oferte{
+  margin-top: 80px;
+}
+
+.teambg{
+  font-size: xx-small;
+}
+.teambg a{
+  font-size: xx-small;
+  color: white;
+}
+
+.myimgbox{
+  width: 200px;
+}
+
+.btn-outline-light {
+  background-color : #ffa22d;
+  color: white;
+}
