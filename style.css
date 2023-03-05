@@ -327,6 +327,13 @@ body{
 /*styiling for job offers page*/
 .oferte{
   margin-top: 80px;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+}
+
+.mybg{
+  background-color: rgb(255, 255, 254);
 }
 
 .teambg{
