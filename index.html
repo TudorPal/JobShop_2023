@@ -44,9 +44,65 @@
           <a href="https://forms.gle/ETweMjWTdJKrcx85A" target="_blank"><button type="button" class="btn btn-outline-light btn-lg">Înscrie-te aici!</button></a>
         </div>
         </div>
+        <section class="orar" id="orar">
+          <div class="container-fluid">
+            <div class="row titluBox d-flex align-items-center">
+                  <h1 class="titlu text-center mb-0">Schedule</h1>
+            </div>
+          </div>
+        <div class="container">
+            <div class="row d-flex justify-content-center text-center mt-4 align-items-center">
+                <div class="slideshow-container1">
+                  <div class="mySlides1 fade2">
+                    <div class="row mx-3">
+                      <img class="px-3 img-fluid center-block" src="images\orar1.png">
+                    </div>
+                  </div>
+            
+                  <div class="mySlides1 fade2">
+                    <div class="row mx-3">
+                      <img class="px-3 img-fluid center-block" src="images\orar2.png">
+                    </div>
+                  </div>
+                
+                  <div class="mySlides1 fade2">
+                    <div class="row mx-3">
+                      <img class="px-3 img-fluid center-block" src="images\orar3.png">
+                    </div>
+                  </div>
+                  <div class="mySlides1 fade2">
+                    <div class="row mx-3">
+                      <img class="px-3 img-fluid center-block" src="images\orar4.png">
+                    </div>
+                  </div>
+            
+                  <div class="mySlides1 fade2">
+                    <div class="row mx-3">
+                      <img class="px-3 img-fluid center-block" src="images\orar5.png">
+                    </div>
+                  </div>
+                
+                  <div class="mySlides1 fade2">
+                    <div class="row mx-3">
+                      <img class="px-3 img-fluid center-block" src="images\orar6.png">
+                    </div>
+                  </div>
+
+                  <div class="mySlides1 fade2">
+                    <div class="row mx-3">
+                      <img class="px-3 img-fluid center-block" src="images\orar7.png">
+                    </div>
+                  </div>
+            
+                  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                </div>
+          </div>
+        </div>
+        </section>
 
         <section class="info" id="info">
-          <div class="container-fluid">
+          <div class="container-fluid mt-4">
             <div class="row titluBox d-flex align-items-center">
                   <h1 class="titlu text-center mb-0">About JobShop®</h1>
             </div>
@@ -440,8 +496,8 @@
                     </div>
                   </div>
                   
-                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
                 </div>
           </div>
         </div>
@@ -795,32 +851,24 @@
       }
     </script>
     <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      // Next/previous controls
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
+      let slideIndex = [1,1];
+      let slideId = ["mySlides1", "mySlides"]
+      showSlides(1, 0);
+      showSlides(1, 1);
+      
+      function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
       }
-
-      // Thumbnail image controls
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        if (n > slides.length) {
-          slideIndex = 1
+      
+      function showSlides(n, no) {
+        let i;
+        let x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) {slideIndex[no] = 1}    
+        if (n < 1) {slideIndex[no] = x.length}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
         }
-        if (n < 1) {
-          slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slides[slideIndex-1].style.display = "block";
+        x[slideIndex[no]-1].style.display = "block";  
       }
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
