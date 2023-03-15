@@ -341,6 +341,11 @@ body{
 
 .mybg{
   background-color: rgb(255, 255, 254);
+  border: 3px solid #ffa02d;
+}
+
+.mybg:hover{
+  border-color: #2b4695;
 }
 
 .teambg{
